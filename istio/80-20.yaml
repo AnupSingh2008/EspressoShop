@@ -10,9 +10,9 @@ spec:
     - destination:
         host: espresso-shop-reviews-svc
         subset: v1
-      weight: 80
+      weight: 50
     - destination:
         host: espresso-shop-reviews-svc
         subset: v2
-      weight: 20
+      weight: 50
 

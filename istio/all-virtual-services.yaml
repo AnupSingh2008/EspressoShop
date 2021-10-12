@@ -38,4 +38,4 @@ spec:
   - route:
     - destination:
         host: espresso-shop-reviews-svc
-        subset: v1
+        subset: v2

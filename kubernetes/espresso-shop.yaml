@@ -134,7 +134,7 @@ spec:
         version: v2
     spec:
       containers:
-      - image: anup2008/espresso-shop-reviews
+      - image: anup2008/espresso-shop-reviews:v2
         imagePullPolicy: Always
         #imagePullPolicy: IfNotPresent
         name: espresso-shop-reviews
