@@ -1,5 +1,3 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -11,12 +9,12 @@ COPY ["EspressoShop.Reviews/EspressoShop.Reviews.csproj", "EspressoShop.Reviews/
 RUN dotnet restore "EspressoShop.Reviews/EspressoShop.Reviews.csproj"
 COPY . .
 WORKDIR "/src/EspressoShop.Reviews"
-RUN dotnet build "EspressoShop.Reviews.csproj" -c Release -o /app/build
+RUN dotnet build "EspressoShop.Reviews.csproj" -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "EspressoShop.Reviews.csproj" -c Release -o /app/publish
+RUN dotnet publish "EspressoShop.Reviews.csproj" -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "EspressoShop.Reviews.dll"]

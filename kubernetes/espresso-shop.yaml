@@ -17,9 +17,9 @@ spec:
         version: v1
     spec:
       containers:
-      - image: hossambarakat/espresso-shop-web
-        # imagePullPolicy: Always
-        imagePullPolicy: IfNotPresent
+      - image: anup2008/espresso-shop-web
+        imagePullPolicy: Always
+        #imagePullPolicy: IfNotPresent
         name: espresso-shop-web
         ports:
         - containerPort: 80
@@ -62,9 +62,9 @@ spec:
         version: v1
     spec:
       containers:
-      - image: hossambarakat/espresso-shop-product-catalog
-        # imagePullPolicy: Always
-        imagePullPolicy: IfNotPresent
+      - image: anup2008/espresso-shop-product-catalog
+        imagePullPolicy: Always
+        #imagePullPolicy: IfNotPresent
         name: espresso-shop-product-catalog
         ports:
         - containerPort: 80
@@ -103,9 +103,9 @@ spec:
         version: v1
     spec:
       containers:
-      - image: hossambarakat/espresso-shop-reviews
-        # imagePullPolicy: Always
-        imagePullPolicy: IfNotPresent
+      - image: anup2008/espresso-shop-reviews
+        imagePullPolicy: Always
+        #imagePullPolicy: IfNotPresent
         name: espresso-shop-reviews
         ports:
         - containerPort: 80
@@ -134,9 +134,9 @@ spec:
         version: v2
     spec:
       containers:
-      - image: hossambarakat/espresso-shop-reviews
-        # imagePullPolicy: Always
-        imagePullPolicy: IfNotPresent
+      - image: anup2008/espresso-shop-reviews
+        imagePullPolicy: Always
+        #imagePullPolicy: IfNotPresent
         name: espresso-shop-reviews
         ports:
         - containerPort: 80
